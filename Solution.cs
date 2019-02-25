@@ -39,26 +39,14 @@ class Solution {
         return result;
     }
 
-    static void Main(string[] args) {
-        // TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+    // static void Main(string[] args) {
 
-        // int n = Convert.ToInt32(Console.ReadLine());
+    //     String s = "abcdefg";
+    //     System.Console.WriteLine(s.Substring(0,2));
 
-        // int[] ar = Array.ConvertAll(Console.ReadLine().Trim().Split(' '), arTemp => Convert.ToInt32(arTemp))
-        // ;
-        // int result = sockMerchant(n, ar);
+    //     long n = 1000000000000;
+    //     int i = (int)(n % 1);
+    //     System.Console.WriteLine(i);
 
-        // textWriter.WriteLine(result);
-
-        // textWriter.Flush();
-        // textWriter.Close();
-
-        String s = "abcdefg";
-        System.Console.WriteLine(s.Substring(0,2));
-
-        long n = 1000000000000;
-        int i = (int)(n % 1);
-        System.Console.WriteLine(i);
-
-    }
+    // }
 }

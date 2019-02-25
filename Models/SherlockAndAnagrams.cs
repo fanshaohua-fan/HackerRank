@@ -27,35 +27,68 @@ class SherlockAndAnagrams {
                 String key = String.Concat(t.OrderBy(c => c));
                 if(!dict.ContainsKey(key))
                 {
-                    // System.Console.WriteLine("No");
                     dict.Add(key, 1);
                 }
                 else
                 {
-                    result++;
+                    result += dict[key];
+                    dict[key] += 1;
                 }
+
+                System.Console.WriteLine(key + "-" + dict[key]);
+                
             }
         }
+
+        // correct, but performance is not good
+        // for(var z = 1; z < s.Length; z++)
+        // {
+        //     for(var i = 0; i < s.Length; i++)
+        //     {
+        //         for(var j = i + 1; j < s.Length - z + 1; j++)
+        //         {
+        //             String x = s.Substring(i, z);
+        //             String y = s.Substring(j, z);
+        //             System.Console.WriteLine(x + "-" + y);
+        //             if( String.Concat(x.OrderBy(c => c))== String.Concat(y.OrderBy(c => c)))
+        //             {
+        //                 result++;
+        //                 System.Console.WriteLine(result);
+        //             }
+        //         }
+        //     }
+        // }
 
 
         return result;
 
     }
 
-    // static void Main(string[] args) {
-    //     TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+    static void Main(string[] args) {
+        // string s = "ifailuhkqqhucpoltgtyovarjsnrbfpvmupwjjjfiwwhrlkpekxxnebfrwibylcvkfealgonjkzwlyfhhkefuvgndgdnbelgruel";
+        string s = "kkkk";
 
-    //     int q = Convert.ToInt32(Console.ReadLine());
+        int result = sherlockAndAnagrams(s);
 
-    //     for (int qItr = 0; qItr < q; qItr++) {
-    //         string s = Console.ReadLine();
+        System.Console.WriteLine(result);
 
-    //         int result = sherlockAndAnagrams(s);
+        s = "ifailuhkqqhucpoltgtyovarjsnrbfpvmupwjjjfiwwhrlkpekxxnebfrwibylcvkfealgonjkzwlyfhhkefuvgndgdnbelgruel";
 
-    //         textWriter.WriteLine(result);
-    //     }
+        result = sherlockAndAnagrams(s);
 
-    //     textWriter.Flush();
-    //     textWriter.Close();
-    // }
+        System.Console.WriteLine(result);
+
+// 5
+// ifailuhkqqhucpoltgtyovarjsnrbfpvmupwjjjfiwwhrlkpekxxnebfrwibylcvkfealgonjkzwlyfhhkefuvgndgdnbelgruel
+// gffryqktmwocejbxfidpjfgrrkpowoxwggxaknmltjcpazgtnakcfcogzatyskqjyorcftwxjrtgayvllutrjxpbzggjxbmxpnde
+// mqmtjwxaaaxklheghvqcyhaaegtlyntxmoluqlzvuzgkwhkkfpwarkckansgabfclzgnumdrojexnrdunivxqjzfbzsodycnsnmw
+// ofeqjnqnxwidhbuxxhfwargwkikjqwyghpsygjxyrarcoacwnhxyqlrviikfuiuotifznqmzpjrxycnqktkryutpqvbgbgthfges
+// zjekimenscyiamnwlpxytkndjsygifmqlqibxxqlauxamfviftquntvkwppxrzuncyenacfivtigvfsadtlytzymuwvpntngkyhw
+
+// 399
+// 471
+// 370
+// 403
+// 428
+    }
 }
