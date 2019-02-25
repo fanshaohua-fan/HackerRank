@@ -64,19 +64,19 @@ class SherlockAndAnagrams {
 
     }
 
-    static void Main(string[] args) {
-        // string s = "ifailuhkqqhucpoltgtyovarjsnrbfpvmupwjjjfiwwhrlkpekxxnebfrwibylcvkfealgonjkzwlyfhhkefuvgndgdnbelgruel";
-        string s = "kkkk";
+    // static void Main(string[] args) {
+    //     // string s = "ifailuhkqqhucpoltgtyovarjsnrbfpvmupwjjjfiwwhrlkpekxxnebfrwibylcvkfealgonjkzwlyfhhkefuvgndgdnbelgruel";
+    //     string s = "kkkk";
 
-        int result = sherlockAndAnagrams(s);
+    //     int result = sherlockAndAnagrams(s);
 
-        System.Console.WriteLine(result);
+    //     System.Console.WriteLine(result);
 
-        s = "ifailuhkqqhucpoltgtyovarjsnrbfpvmupwjjjfiwwhrlkpekxxnebfrwibylcvkfealgonjkzwlyfhhkefuvgndgdnbelgruel";
+    //     s = "ifailuhkqqhucpoltgtyovarjsnrbfpvmupwjjjfiwwhrlkpekxxnebfrwibylcvkfealgonjkzwlyfhhkefuvgndgdnbelgruel";
 
-        result = sherlockAndAnagrams(s);
+    //     result = sherlockAndAnagrams(s);
 
-        System.Console.WriteLine(result);
+    //     System.Console.WriteLine(result);
 
 // 5
 // ifailuhkqqhucpoltgtyovarjsnrbfpvmupwjjjfiwwhrlkpekxxnebfrwibylcvkfealgonjkzwlyfhhkefuvgndgdnbelgruel
@@ -90,5 +90,5 @@ class SherlockAndAnagrams {
 // 370
 // 403
 // 428
-    }
+    // }
 }
