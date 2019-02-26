@@ -103,35 +103,35 @@ class CommonChild {
         return maxLen = results.Count;
     }
 
-    static void Main(string[] args) {
+    // static void Main(string[] args) {
 
-        string s1 = "SHINCHANHA";
-        string s2 = "NOHARAAAHA";
+    //     string s1 = "SHINCHANHA";
+    //     string s2 = "NOHARAAAHA";
 
-        // int a = "FG".IndexOf('G');
+    //     // int a = "FG".IndexOf('G');
 
-        int result = commonChild(s1, s2);
-        Console.WriteLine(result);
+    //     int result = commonChild(s1, s2);
+    //     Console.WriteLine(result);
 
-        s1 = "HARRY";
-        s2 = "SALLY";
-        result = commonChild(s1, s2);
-        Console.WriteLine(result);
+    //     s1 = "HARRY";
+    //     s2 = "SALLY";
+    //     result = commonChild(s1, s2);
+    //     Console.WriteLine(result);
 
-        s1 = "ABCDEF";
-        s2 = "FBDAMN";
-        result = commonChild(s1, s2);
-        Console.WriteLine(result);
+    //     s1 = "ABCDEF";
+    //     s2 = "FBDAMN";
+    //     result = commonChild(s1, s2);
+    //     Console.WriteLine(result);
 
-        s1 = "SHINCHAN";
-        s2 = "NOHARAAA";
-        result = commonChild(s1, s2);
-        Console.WriteLine(result);
+    //     s1 = "SHINCHAN";
+    //     s2 = "NOHARAAA";
+    //     result = commonChild(s1, s2);
+    //     Console.WriteLine(result);
 
-        s1 = "WEWOUCUIDGCGTRMEZEPXZFEJWISRSBBSYXAYDFEJJDLEBVHHKS";
-        s2 = "FDAGCXGKCTKWNECHMRXZWMLRYUCOCZHJRRJBOAJOQJZZVUYXIC";
-        result = commonChild(s1, s2);
-        Console.WriteLine(result);
+    //     s1 = "WEWOUCUIDGCGTRMEZEPXZFEJWISRSBBSYXAYDFEJJDLEBVHHKS";
+    //     s2 = "FDAGCXGKCTKWNECHMRXZWMLRYUCOCZHJRRJBOAJOQJZZVUYXIC";
+    //     result = commonChild(s1, s2);
+    //     Console.WriteLine(result);
 
-    }
+    // }
 }
