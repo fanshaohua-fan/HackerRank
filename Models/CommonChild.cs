@@ -16,59 +16,64 @@ class CommonChild {
 
     // Complete the commonChild function below.
     static int commonChild(string s1, string s2) {
-        var dict = new Dictionary<char, int>();
-        var l = new List<int>();
-        var maxLen = 0;
+        int result = 0;
+        int pA = 0;
+        int pB = 0;
+        
+        var resultList = new List<char>();
 
-        foreach(var c in s1)
+        for(var i=0; i<s1.Length; i++)
         {
-            var start = dict.ContainsKey(c) ? dict[c] : 0;
-            var i = s2.IndexOf(c, start);
-            if(i >= 0)
-            {
-                Console.WriteLine(c + "-" + i);
-                l.Add(i);
+            var t1 = s1.Substring(pA, i + 1 - pA);
+            var t2 = s2.Substring(pB, i + 1 - pB);
 
-                if(dict.ContainsKey(c))
-                {
-                    dict[c] = i;
-                }
-                else
-                {
-                    dict.Add(c, i);
-                }
-            }
-        }
+            Console.WriteLine(t1 + "-" + s2[i]);
+            Console.WriteLine(t2 + "-" + s1[i]);
 
-        var count = 1;
-        for(var i = 0; i < l.Count - 1; i++)
-        {
-            Console.WriteLine(i + "-" + l[i]);
-            if(l[i] < l[i+1])
+            if(s2[i] == s1[i])
             {
-                count++;
-                if(count > maxLen)
-                {
-                    maxLen = count;
-                }
+                result++;
+                pB = i + 1;
+                pA = i + 1;
+                resultList.Add(s1[i]);
             }
             else
             {
-                count = 1;
+                if(t1.IndexOf(s2[i]) >= 0)
+                {
+                    result++;
+                    pB = i + 1;
+                    pA += t1.IndexOf(s2[i]) + 1;
+                    resultList.Add(s2[i]);
+                }
+                
+                if(t2.IndexOf(s1[i]) >= 0)
+                {
+                    result++;
+                    pA = i + 1;
+                    pB += t2.IndexOf(s1[i]) + 1;
+                    resultList.Add(s1[i]);
+                }
             }
         }
 
-        return maxLen;
+        return result;
     }
 
     static void Main(string[] args) {
 
-        string s1 = "ABCDEFA";
+        string s1 = "SHINCHAN";
+        string s2 = "NOHARAAA";
 
-        string s2 = "FBDAMN";
+        // int a = "FG".IndexOf('G');
 
         int result = commonChild(s1, s2);
+        Console.WriteLine(result);
 
+        s1 = "WEWOUCUIDGCGTRMEZEPXZFEJWISRSBBSYXAYDFEJJDLEBVHHKS";
+        s2 = "FDAGCXGKCTKWNECHMRXZWMLRYUCOCZHJRRJBOAJOQJZZVUYXIC";
+
+        result = commonChild(s1, s2);
         Console.WriteLine(result);
 
     }
