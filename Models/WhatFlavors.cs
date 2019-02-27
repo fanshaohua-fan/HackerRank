@@ -75,17 +75,17 @@ class WhatFlavors {
 
     }
 
-    static void Main(string[] args) {
-        // int t = Convert.ToInt32(Console.ReadLine());
+    // static void Main(string[] args) {
+    //     // int t = Convert.ToInt32(Console.ReadLine());
 
-        // for (int tItr = 0; tItr < t; tItr++) {
-            int money = Convert.ToInt32(4);
+    //     // for (int tItr = 0; tItr < t; tItr++) {
+    //         int money = Convert.ToInt32(4);
 
-            // int n = Convert.ToInt32(Console.ReadLine());
+    //         // int n = Convert.ToInt32(Console.ReadLine());
 
-            int[] cost = Array.ConvertAll("1 4 5 3 2".Split(' '), costTemp => Convert.ToInt32(costTemp))
-            ;
-            whatFlavors(cost, money);
-        // }
-    }
+    //         int[] cost = Array.ConvertAll("1 4 5 3 2".Split(' '), costTemp => Convert.ToInt32(costTemp))
+    //         ;
+    //         whatFlavors(cost, money);
+    //     // }
+    // }
 }
