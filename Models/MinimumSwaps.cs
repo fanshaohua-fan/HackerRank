@@ -66,11 +66,11 @@ class MinimumSwaps {
         return swaps;
     }
 
-    static void Main(string[] args) {
+    // static void Main(string[] args) {
 
-        int[] arr = Array.ConvertAll("1 3 5 2 4 6 7".Split(' '), arrTemp => Convert.ToInt32(arrTemp))
-        ;
-        int res = minimumSwaps(arr);
-        Console.WriteLine(res);
-    }
+    //     int[] arr = Array.ConvertAll("1 3 5 2 4 6 7".Split(' '), arrTemp => Convert.ToInt32(arrTemp))
+    //     ;
+    //     int res = minimumSwaps(arr);
+    //     Console.WriteLine(res);
+    // }
 }
