@@ -40,22 +40,22 @@ class LuckBalance {
         return arrUnIm.Sum() + sumLose - (arrIm.Sum() - sumLose);
     }
 
-    static void Main(string[] args) {
+    // static void Main(string[] args) {
 
 
-        int n = Convert.ToInt32(6);
+    //     int n = Convert.ToInt32(6);
 
-        int k = Convert.ToInt32(3);
+    //     int k = Convert.ToInt32(3);
 
-        int[][] contests = new int[n][];
+    //     int[][] contests = new int[n][];
 
-        contests[0] = Array.ConvertAll("5 1".Split(' '), contestsTemp => Convert.ToInt32(contestsTemp));
-        contests[1] = Array.ConvertAll("2 1".Split(' '), contestsTemp => Convert.ToInt32(contestsTemp));
-        contests[2] = Array.ConvertAll("1 1".Split(' '), contestsTemp => Convert.ToInt32(contestsTemp));
-        contests[3] = Array.ConvertAll("8 1".Split(' '), contestsTemp => Convert.ToInt32(contestsTemp));
-        contests[4] = Array.ConvertAll("10 0".Split(' '), contestsTemp => Convert.ToInt32(contestsTemp));
-        contests[5] = Array.ConvertAll("5 0".Split(' '), contestsTemp => Convert.ToInt32(contestsTemp));
-        int result = luckBalance(k, contests);
+    //     contests[0] = Array.ConvertAll("5 1".Split(' '), contestsTemp => Convert.ToInt32(contestsTemp));
+    //     contests[1] = Array.ConvertAll("2 1".Split(' '), contestsTemp => Convert.ToInt32(contestsTemp));
+    //     contests[2] = Array.ConvertAll("1 1".Split(' '), contestsTemp => Convert.ToInt32(contestsTemp));
+    //     contests[3] = Array.ConvertAll("8 1".Split(' '), contestsTemp => Convert.ToInt32(contestsTemp));
+    //     contests[4] = Array.ConvertAll("10 0".Split(' '), contestsTemp => Convert.ToInt32(contestsTemp));
+    //     contests[5] = Array.ConvertAll("5 0".Split(' '), contestsTemp => Convert.ToInt32(contestsTemp));
+    //     int result = luckBalance(k, contests);
 
-    }
+    // }
 }
