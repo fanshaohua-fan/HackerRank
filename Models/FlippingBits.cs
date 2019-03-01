@@ -39,10 +39,10 @@ class FlippingBits {
         return Convert.ToInt64(newBits, 2);
     }
 
-    static void Main(string[] args) {
-        long n = Convert.ToInt64("1");
+    // static void Main(string[] args) {
+    //     long n = Convert.ToInt64("1");
 
-        long result = flippingBits(n);
+    //     long result = flippingBits(n);
 
-    }
+    // }
 }
