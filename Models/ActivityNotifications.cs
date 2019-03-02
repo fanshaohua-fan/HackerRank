@@ -87,16 +87,16 @@ class ActivityNotifications {
         return count;
     }
 
-    static void Main(string[] args) {
+    // static void Main(string[] args) {
 
 
-        int d = Convert.ToInt32(5);
+    //     int d = Convert.ToInt32(5);
 
-        int[] expenditure = Array.ConvertAll(Console.ReadLine().Split(' '), expenditureTemp => Convert.ToInt32(expenditureTemp))
-        ;
-        int result = activityNotifications(expenditure, d);
+    //     int[] expenditure = Array.ConvertAll(Console.ReadLine().Split(' '), expenditureTemp => Convert.ToInt32(expenditureTemp))
+    //     ;
+    //     int result = activityNotifications(expenditure, d);
 
-        Console.WriteLine(result);
+    //     Console.WriteLine(result);
 
-    }
+    // }
 }
