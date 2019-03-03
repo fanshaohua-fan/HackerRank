@@ -120,15 +120,15 @@ class SubstrCount {
 
     }
 
-    static void Main(string[] args) {
-        int n = 8;
+    // static void Main(string[] args) {
+    //     int n = 8;
 
-        // string s = Console.ReadLine();
-        string s = "asassdss";
+    //     // string s = Console.ReadLine();
+    //     string s = "asassdss";
 
-        long result = substrCount(n, s);
+    //     long result = substrCount(n, s);
 
-        Console.WriteLine(result);
+    //     Console.WriteLine(result);
 
-    }
+    // }
 }
