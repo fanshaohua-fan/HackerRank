@@ -17,18 +17,33 @@ class Pairs {
     // Complete the pairs function below.
     static int pairs(int k, int[] arr) {
         Array.Sort(arr);
-        Array.Reverse(arr);
+        // Array.Reverse(arr);
         int count = 0;
 
-        for(var i = 0; i < arr.Length - 1; i++)
+        // for(var i = 0; i < arr.Length - 1; i++)
+        // {
+        //     for(var j = i + 1; j < arr.Length; j++)
+        //     {
+        //         if(arr[i] - arr[j] == k)
+        //         {
+        //             count++;
+        //             break;
+        //         }
+        //     }
+        // }
+
+        var dict = new Dictionary<int, int>();
+        foreach(var i in arr)
         {
-            for(var j = i + 1; j < arr.Length; j++)
+            dict.Add(i, 1);
+        }
+
+        foreach(var i in arr)
+        {
+            var v = i + k;
+            if(dict.ContainsKey(v))
             {
-                if(arr[i] - arr[j] == k)
-                {
-                    count++;
-                    break;
-                }
+                count++;
             }
         }
 
