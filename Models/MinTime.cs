@@ -16,71 +16,92 @@ class MinTime {
 
     // Complete the minTime function below.
     static long minTime(long[] machines, long goal) {
-        long days = 1;
-        long count = 0;
-        var dict = new Dictionary<long, long>();
+        long minDays = (goal * machines.Min()) / machines.Length;
+        long maxDays = (goal * machines.Max()) / machines.Length;
 
-        foreach(var m in machines)
+        while(minDays < maxDays)
         {
-            if(dict.ContainsKey(m))
+            long days = (minDays + maxDays) / 2;
+            var result = (from m in machines
+                            select days / m).Sum();
+
+            if(result >= goal)
             {
-                dict[m] += 1;
+                maxDays = days;
             }
             else
             {
-                dict.Add(m, 1);
+                minDays = days + 1;
             }
         }
 
-        var distinct = machines.Distinct().ToArray();
-        Array.Sort(distinct);
-        var foundLCM = false;
+        return minDays;
 
-        while(count < goal && !foundLCM)
-        {
-            var n = 0;
-            foreach(var d in distinct)
-            {
-                if(days % d == 0)
-                {
-                    count += dict[d];
-                    n++;
-                }
-            }
+        // long days = 1;
+        // long count = 0;
+        // var dict = new Dictionary<long, long>();
 
-            if(n == distinct.Length)
-            {
-                foundLCM = true;
-            }
+        // foreach(var m in machines)
+        // {
+        //     if(dict.ContainsKey(m))
+        //     {
+        //         dict[m] += 1;
+        //     }
+        //     else
+        //     {
+        //         dict.Add(m, 1);
+        //     }
+        // }
 
-            days++;
-        }
+        // var distinct = machines.Distinct().ToArray();
+        // Array.Sort(distinct);
+        // var foundLCM = false;
 
-        if(foundLCM && count < goal)
-        {
-            var LCM = days - 1;
-            long times = goal / count;
-            long left = goal % count;
+        // while(count < goal && !foundLCM)
+        // {
+        //     var n = 0;
+        //     foreach(var d in distinct)
+        //     {
+        //         if(days % d == 0)
+        //         {
+        //             count += dict[d];
+        //             n++;
+        //         }
+        //     }
+
+        //     if(n == distinct.Length)
+        //     {
+        //         foundLCM = true;
+        //     }
+
+        //     days++;
+        // }
+
+        // if(foundLCM && count < goal)
+        // {
+        //     var LCM = days - 1;
+        //     long times = goal / count;
+        //     long left = goal % count;
 
 
-            days = LCM * times + 1;
-            count = 0;
+        //     days = LCM * times + 1;
+        //     count = 0;
 
-            while(count < left)
-            {
-                foreach(var d in distinct)
-                {
-                    if(days % d == 0)
-                    {
-                        count += dict[d];
-                    }
-                }
+        //     while(count < left)
+        //     {
+        //         foreach(var d in distinct)
+        //         {
+        //             if(days % d == 0)
+        //             {
+        //                 count += dict[d];
+        //             }
+        //         }
 
-                days++;
-            }
-        }
+        //         days++;
+        //     }
+        // }
 
-        return days - 1;
+        // return days - 1;
 
     }
 
