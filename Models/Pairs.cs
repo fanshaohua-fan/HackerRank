@@ -50,19 +50,19 @@ class Pairs {
         return count;
     }
 
-    static void Main(string[] args) {
+    // static void Main(string[] args) {
 
-        string[] nk = Console.ReadLine().Split(' ');
+    //     string[] nk = Console.ReadLine().Split(' ');
 
-        int n = Convert.ToInt32(nk[0]);
+    //     int n = Convert.ToInt32(nk[0]);
 
-        int k = Convert.ToInt32(nk[1]);
+    //     int k = Convert.ToInt32(nk[1]);
 
-        int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp))
-        ;
-        int result = pairs(k, arr);
+    //     int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp))
+    //     ;
+    //     int result = pairs(k, arr);
 
-        Console.WriteLine(result);
+    //     Console.WriteLine(result);
 
-    }
+    // }
 }

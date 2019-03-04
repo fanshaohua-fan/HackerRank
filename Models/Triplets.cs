@@ -79,30 +79,30 @@ class Triplets {
         return result;
     }
 
-    static void Main(string[] args) {
-        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+    // static void Main(string[] args) {
+    //     TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
 
-        string[] lenaLenbLenc = Console.ReadLine().Split(' ');
+    //     string[] lenaLenbLenc = Console.ReadLine().Split(' ');
 
-        int lena = Convert.ToInt32(lenaLenbLenc[0]);
+    //     int lena = Convert.ToInt32(lenaLenbLenc[0]);
 
-        int lenb = Convert.ToInt32(lenaLenbLenc[1]);
+    //     int lenb = Convert.ToInt32(lenaLenbLenc[1]);
 
-        int lenc = Convert.ToInt32(lenaLenbLenc[2]);
+    //     int lenc = Convert.ToInt32(lenaLenbLenc[2]);
 
-        int[] arra = Array.ConvertAll(Console.ReadLine().Split(' '), arraTemp => Convert.ToInt32(arraTemp))
-        ;
+    //     int[] arra = Array.ConvertAll(Console.ReadLine().Split(' '), arraTemp => Convert.ToInt32(arraTemp))
+    //     ;
 
-        int[] arrb = Array.ConvertAll(Console.ReadLine().Split(' '), arrbTemp => Convert.ToInt32(arrbTemp))
-        ;
+    //     int[] arrb = Array.ConvertAll(Console.ReadLine().Split(' '), arrbTemp => Convert.ToInt32(arrbTemp))
+    //     ;
 
-        int[] arrc = Array.ConvertAll(Console.ReadLine().Split(' '), arrcTemp => Convert.ToInt32(arrcTemp))
-        ;
-        long ans = triplets(arra, arrb, arrc);
+    //     int[] arrc = Array.ConvertAll(Console.ReadLine().Split(' '), arrcTemp => Convert.ToInt32(arrcTemp))
+    //     ;
+    //     long ans = triplets(arra, arrb, arrc);
 
-        textWriter.WriteLine(ans);
+    //     textWriter.WriteLine(ans);
 
-        textWriter.Flush();
-        textWriter.Close();
-    }
+    //     textWriter.Flush();
+    //     textWriter.Close();
+    // }
 }
