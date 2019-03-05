@@ -105,19 +105,19 @@ class MinTime {
 
     }
 
-    static void Main(string[] args) {
+    // static void Main(string[] args) {
 
-        string[] nGoal = Console.ReadLine().Split(' ');
+    //     string[] nGoal = Console.ReadLine().Split(' ');
 
-        int n = Convert.ToInt32(nGoal[0]);
+    //     int n = Convert.ToInt32(nGoal[0]);
 
-        long goal = Convert.ToInt64(nGoal[1]);
+    //     long goal = Convert.ToInt64(nGoal[1]);
 
-        long[] machines = Array.ConvertAll(Console.ReadLine().Split(' '), machinesTemp => Convert.ToInt64(machinesTemp))
-        ;
-        long ans = minTime(machines, goal);
+    //     long[] machines = Array.ConvertAll(Console.ReadLine().Split(' '), machinesTemp => Convert.ToInt64(machinesTemp))
+    //     ;
+    //     long ans = minTime(machines, goal);
 
-        Console.WriteLine(ans);
+    //     Console.WriteLine(ans);
 
-    }
+    // }
 }
