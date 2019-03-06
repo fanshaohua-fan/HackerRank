@@ -64,20 +64,20 @@ class Candies {
         return min;
     }
 
-    static void Main(string[] args) {
+    // static void Main(string[] args) {
 
-        int n = Convert.ToInt32(Console.ReadLine());
+    //     int n = Convert.ToInt32(Console.ReadLine());
 
-        int[] arr = new int [n];
+    //     int[] arr = new int [n];
 
-        for (int i = 0; i < n; i++) {
-            int arrItem = Convert.ToInt32(Console.ReadLine());
-            arr[i] = arrItem;
-        }
+    //     for (int i = 0; i < n; i++) {
+    //         int arrItem = Convert.ToInt32(Console.ReadLine());
+    //         arr[i] = arrItem;
+    //     }
 
-        long result = candies(n, arr);
+    //     long result = candies(n, arr);
 
-        Console.WriteLine(result);
+    //     Console.WriteLine(result);
 
-    }
+    // }
 }
