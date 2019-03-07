@@ -4,44 +4,44 @@ using System.IO;
 using System.Text;
 
 class Queue {
-    static private Stack<int> sA = new Stack<int>();
-    static private Stack<int> sB = new Stack<int>();
+    // static private Stack<int> sA = new Stack<int>();
+    // static private Stack<int> sB = new Stack<int>();
 
-    static public void Enqueue(int data)
-    {
-        while(sB.Count > 0)
-        {
-            int t = sB.Pop();
-            sA.Push(t);
-        }
+    // static public void Enqueue(int data)
+    // {
+    //     while(sB.Count > 0)
+    //     {
+    //         int t = sB.Pop();
+    //         sA.Push(t);
+    //     }
 
-        sA.Push(data);
-    }
+    //     sA.Push(data);
+    // }
 
-    static public void Dequeue()
-    {
-        while(sA.Count > 0)
-        {
-            int t = sA.Pop();
-            sB.Push(t);
-        }
+    // static public void Dequeue()
+    // {
+    //     while(sA.Count > 0)
+    //     {
+    //         int t = sA.Pop();
+    //         sB.Push(t);
+    //     }
 
-        if(sB.Count > 0)
-        {
-            sB.Pop();
-        }
-    }
+    //     if(sB.Count > 0)
+    //     {
+    //         sB.Pop();
+    //     }
+    // }
 
-    static public int Front()
-    {
-        while(sA.Count > 0)
-        {
-            var t = sA.Pop();
-            sB.Push(t);
-        }
+    // static public int Front()
+    // {
+    //     while(sA.Count > 0)
+    //     {
+    //         var t = sA.Pop();
+    //         sB.Push(t);
+    //     }
 
-        return sB.Peek();
-    }
+    //     return sB.Peek();
+    // }
 
     static void Main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution */
@@ -56,15 +56,16 @@ class Queue {
                 list.Add(s);
             }
 
+            var queue = new Queue<int>();
             foreach(var s in list)
             {
                 if(s == "2")
                 {
-                    Dequeue();
+                    queue.Dequeue();
                 }
                 else if(s == "3")
                 {
-                    var res = Front();
+                    var res = queue.Peek();
                     // Console.WriteLine(res);
                     Byte[] info = new UTF8Encoding(true).GetBytes(res.ToString() + "\n");
                     // Add some information to the file.
@@ -73,7 +74,7 @@ class Queue {
                 else
                 {
                     string data = s.Split(' ')[1];
-                    Enqueue(Convert.ToInt32(data));
+                    queue.Enqueue(Convert.ToInt32(data));
                 }
             }
         }
