@@ -12,24 +12,48 @@ using System.Text.RegularExpressions;
 using System.Text;
 using System;
 
+
 class LargestRectangle {
 
     // Complete the largestRectangle function below.
     static long largestRectangle(int[] h) {
-        var linkedList = new LinkedList<int>();
+        long max = 0;
+
         for(var i = 0; i < h.Length - 1; i++)
         {
-            var pos = i;
             var height = h[i];
+            var queue = new Queue<int>();
+            for(var j = i; j >= 0; j--)
+            {
+                if(h[j] < height)
+                {
+                    break;
+                }
+                queue.Enqueue(h[j]);
+            }
 
-            
+            for(var j = i + 1; j < h.Length; j++)
+            {
+                if(h[j] < height)
+                {
+                    break;
+                }
+                queue.Enqueue(h[j]);
+            }
 
+            var rectangle = height * queue.Count;
+
+            if(rectangle > max)
+            {
+                max = rectangle;
+            }
         }
+
+        return max;
 
     }
 
     static void Main(string[] args) {
-        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
 
         int n = Convert.ToInt32(Console.ReadLine());
 
@@ -37,9 +61,7 @@ class LargestRectangle {
         ;
         long result = largestRectangle(h);
 
-        textWriter.WriteLine(result);
+        Console.WriteLine(result);
 
-        textWriter.Flush();
-        textWriter.Close();
     }
 }
