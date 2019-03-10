@@ -53,15 +53,15 @@ class LargestRectangle {
 
     }
 
-    static void Main(string[] args) {
+    // static void Main(string[] args) {
 
-        int n = Convert.ToInt32(Console.ReadLine());
+    //     int n = Convert.ToInt32(Console.ReadLine());
 
-        int[] h = Array.ConvertAll(Console.ReadLine().Split(' '), hTemp => Convert.ToInt32(hTemp))
-        ;
-        long result = largestRectangle(h);
+    //     int[] h = Array.ConvertAll(Console.ReadLine().Split(' '), hTemp => Convert.ToInt32(hTemp))
+    //     ;
+    //     long result = largestRectangle(h);
 
-        Console.WriteLine(result);
+    //     Console.WriteLine(result);
 
-    }
+    // }
 }
