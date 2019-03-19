@@ -13,12 +13,12 @@ using System.Text;
 using System;
 
 class Replace {
-    static void Main(string[] args) {
-        string s = "fashaohua_@abc.nl";
-        string replaced = s.Replace("_@", "@");
+    // static void Main(string[] args) {
+    //     string s = "fashaohua_@abc.nl";
+    //     string replaced = s.Replace("_@", "@");
 
-        Console.WriteLine(replaced);
-        Console.ReadKey();
-    }
+    //     Console.WriteLine(replaced);
+    //     Console.ReadKey();
+    // }
 
 }
