@@ -26,20 +26,21 @@ class LargestRectangle {
 
         }
 
+        return 0;
     }
 
-    static void Main(string[] args) {
-        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+    // static void Main(string[] args) {
+    //     TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
 
-        int n = Convert.ToInt32(Console.ReadLine());
+    //     int n = Convert.ToInt32(Console.ReadLine());
 
-        int[] h = Array.ConvertAll(Console.ReadLine().Split(' '), hTemp => Convert.ToInt32(hTemp))
-        ;
-        long result = largestRectangle(h);
+    //     int[] h = Array.ConvertAll(Console.ReadLine().Split(' '), hTemp => Convert.ToInt32(hTemp))
+    //     ;
+    //     long result = largestRectangle(h);
 
-        textWriter.WriteLine(result);
+    //     textWriter.WriteLine(result);
 
-        textWriter.Flush();
-        textWriter.Close();
-    }
+    //     textWriter.Flush();
+    //     textWriter.Close();
+    // }
 }
