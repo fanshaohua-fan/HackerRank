@@ -15,25 +15,25 @@ using System;
 class CountingValleys {
 
     // Complete the countingValleys function below.
-    static int countingValleys(int n, string s) {
-        int seaLevel = 0;
+    static int countingValleys(int n, string path) {
+        int level = 0;
         int valleyCount = 0;
 
-        foreach( var i in s )
+        foreach(var i in path)
         {
             if(i == 'U')
             {
-                seaLevel += 1;
-            }
-            else
-            {
-                if (seaLevel == 0)
+                level += 1;
+                // when level goes from -1 to 0
+                if (level == 0)
                 {
                     valleyCount += 1;
                 }
-                seaLevel -= 1;
             }
-            
+            else
+            {
+                level -= 1;
+            }            
         }
 
         return valleyCount;
